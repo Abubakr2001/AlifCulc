@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AlifCulc</string>
+
+    <string name="nameTop">ALIF</string>
+    <string name="ThreeMonth">3-Month</string>
+    <string name="SixMonth">6-Month</string>
+    <string name="NineMonth">9-Month</string>
+    <string name="TwelveMonth">12-Month</string>
+    <string name="FifteenMonth">15-Month</string>
+    <string name="EighteenMonth">18-Month</string>
+    <string name="TwentyFourMonth">24-Month</string>
+
+    <string name="btnName">COUNT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
