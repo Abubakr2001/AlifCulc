@@ -4,6 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel: ViewModel() {
-    val name = MutableLiveData<Int>()
+    val name = MutableLiveData<Double>()
 
 }

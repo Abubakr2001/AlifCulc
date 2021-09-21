@@ -1,5 +1,6 @@
 package com.leonardo.alifculc
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import java.text.DecimalFormat
+import kotlin.math.roundToInt
+import kotlin.math.roundToLong
 
 class MainFragment : Fragment(R.layout.fragment_main) {
     lateinit var txtThreeMonth: TextView
@@ -25,6 +30,12 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private lateinit var viewModel: MainViewModel
 
 
+
+    companion object {
+        fun newInstance() = MainFragment()
+    }
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -37,24 +48,78 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         txtTwentyFourMonth = view.findViewById(R.id.TwentyFourMonthTxtView)
 
         editTxt =view.findViewById(R.id.editText)
-        val txtEdit =editTxt.text.toString().toInt()
+
+
         btn = view.findViewById(R.id.btnCount)
 
-        val threePercent = 0.03
-        val sixPercent = 0.06
-        val ninePercent = 0.15
-        val twelvePercent = 0.20
-        val fifteenPercent = 0.24
-        val  eighteenPercent = 0.27
-        val twentyFourPercent = 0.30
-        
+        val monthThree = 3
+        val threePercent = 6
+        val monthSix = 6
+        val sixPercent = 10
+        val monthNine = 9
+        val ninePercent = 15
+        val monthTwelve = 12
+        val twelvePercent = 20
+        val monthFifteen = 15
+        val fifteenPercent = 24
+        val monthEighteen = 18
+        val eighteenPercent = 27
+        val monthTwentyFour = 24
+        val twentyFourPercent = 30
 
-        btn.setOnClickListener {
-           // txtThreeMonth.setText((txtEdit + threePercent)/3)
+
+
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+
+        viewModel.name.observe(viewLifecycleOwner){
+            txtThreeMonth.text = it.toString()
         }
 
+        btn.setOnClickListener {
+            val getEdit = editTxt.text.toString()
+
+            if(getEdit.isEmpty()){
+                Toast.makeText(requireContext(), "puy number", Toast.LENGTH_SHORT).show()
+            }else{
+                val inputD: Double = getEdit.toDouble()
+
+                val sumThree = (((inputD * threePercent)/100) + inputD)/monthThree
+                val sumThreeResult = String.format("%.2f", sumThree).toDouble()
+                txtThreeMonth.text = sumThreeResult.toString()
+
+
+
+                val sumSix = (((inputD * sixPercent)/100) + inputD)/monthSix
+                val sumSixResult = String.format("%.2f", sumSix).toDouble()
+                txtSixMonth.text = sumSixResult.toString()
+
+                val sumNine = (((inputD * ninePercent)/100) + inputD)/monthNine
+                val sumNineResult = String.format("%.2f", sumNine).toDouble()
+                txtNineMonth.text = sumNineResult.toString()
+
+                val sumTwelve = (((inputD * twelvePercent)/100) + inputD)/monthTwelve
+                val sumTwelveResult = String.format("%.2f", sumTwelve).toDouble()
+                txtTwelveMonth.text = sumTwelveResult.toString()
+
+                val sumFifteen = (((inputD * fifteenPercent)/100) + inputD)/monthFifteen
+                val sumFifteenResult = String.format("%.2f", sumFifteen).toDouble()
+                txtFifteenMonth.text = sumFifteenResult.toString()
+
+                val sumEighteen = (((inputD * eighteenPercent)/100) + inputD)/monthEighteen
+                val sumEighteenResult = String.format("%.2f", sumEighteen).toDouble()
+                txtEighteenMonth.text = sumEighteenResult.toString()
+
+                val sumTwentyFour = (((inputD * twentyFourPercent)/100) + inputD)/monthTwentyFour
+                val sumTwentyFourResult = String.format("%.2f", sumTwentyFour).toDouble()
+                txtTwentyFourMonth.text = sumTwentyFourResult.toString()
+
+            }
+
+        }
+
+
+
+
     }
-    companion object {
-        fun newInstance() = MainFragment()
-    }
+
 }
