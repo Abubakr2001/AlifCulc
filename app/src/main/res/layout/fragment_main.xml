@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EAE7E7"
+    android:background="#C6C6C6"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#919A84">
+            android:background="#FFFFFF">
 
             <TextView
                 android:id="@+id/textView14"
@@ -35,6 +35,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+
 
             <TextView
                 android:id="@+id/textView"
@@ -252,7 +254,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/btnCount"
@@ -263,11 +266,11 @@
                 android:layout_marginEnd="95dp"
                 android:text="@string/btnName"
                 android:textSize="22sp"
-                android:background="#A35858"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/editText"
+                 />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
