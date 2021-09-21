@@ -87,7 +87,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 val sumThreeResult = String.format("%.2f", sumThree).toDouble()
                 txtThreeMonth.text = sumThreeResult.toString()
 
-
+//fklfsdk
 
                 val sumSix = (((inputD * sixPercent)/100) + inputD)/monthSix
                 val sumSixResult = String.format("%.2f", sumSix).toDouble()
