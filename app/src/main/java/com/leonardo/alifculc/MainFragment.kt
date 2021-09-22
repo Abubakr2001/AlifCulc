@@ -86,14 +86,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 val sumTwentyFourResult = String.format("%.2f", sumTwentyFour)
                 txtTwentyFourMonth.text = sumTwentyFourResult
 
-                //fox
-
             }
 
         }
-
-
-
 
     }
 
