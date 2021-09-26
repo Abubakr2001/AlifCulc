@@ -66,8 +66,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.name.observe(viewLifecycleOwner){
-            txtThreeMonth.text = it.toString()
+        viewModel.txtThree.observe(viewLifecycleOwner){
+            txtThreeMonth.text = String.format("%.2f", it)
         }
 
 
@@ -84,8 +84,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 val rePayResult = String.format("%.2f", rePayThree)
                 rePayThreeTxt.text = rePayResult
                 val sumThree = (((inputD * 6)/100) + inputD)/3
-                val sumThreeResult = String.format("%.2f", sumThree)
-                viewModel.name.value =  sumThree
+                viewModel.txtThree.value =  sumThree
 
                 val rePaySix = (((inputD * 10)/100) + inputD)
                 val rePayResultSix = String.format("%.2f", rePaySix)
