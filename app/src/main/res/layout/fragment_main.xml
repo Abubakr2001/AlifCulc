@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C6C6C6"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -13,58 +12,45 @@
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:elevation="5dp"
-        app:cardCornerRadius="15dp"
-        >
+        app:cardCornerRadius="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF">
 
-
             <ImageView
                 android:id="@+id/textView14"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
                 android:layout_marginStart="200dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="180dp"
                 android:elevation="45dp"
                 android:src="@drawable/alif"
                 android:textSize="50sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="130dp"
-                android:background="#03000000"
-                android:fontFamily="sans-serif"
                 android:text="@string/ThreeMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <TextView
                 android:id="@+id/re_payment_Three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="60dp"
-                android:layout_marginTop="128dp"
+                android:layout_marginTop="130dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/ThreeMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.359"
                 app:layout_constraintStart_toEndOf="@+id/textView"
@@ -72,30 +58,19 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/SixMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
             <TextView
                 android:id="@+id/re_payment_Six"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/SixMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.359"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -103,29 +78,19 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/NineMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
                 android:id="@+id/re_payment_Nine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/NineMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.359"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -133,29 +98,19 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/TwelveMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
                 android:id="@+id/re_payment_Twelve"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/TwelveMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.349"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
@@ -163,29 +118,19 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/FifteenMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <TextView
                 android:id="@+id/re_payment_fifteen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/FifteenMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.349"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -193,29 +138,19 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/EighteenMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <TextView
                 android:id="@+id/re_payment_Eighteen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/EighteenMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.349"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -223,29 +158,19 @@
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
                 android:text="@string/TwentyFourMonth"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
                 android:id="@+id/re_payment_TwentyFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="35dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/TwentyFourMonthTxtView"
                 app:layout_constraintHorizontal_bias="0.349"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
@@ -253,60 +178,40 @@
 
             <TextView
                 android:id="@+id/ThreeMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="160dp"
                 android:layout_marginTop="130dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/SixMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="160dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/ThreeMonthTxtView" />
 
             <TextView
                 android:id="@+id/NineMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="160dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/SixMonthTxtView" />
 
             <TextView
                 android:id="@+id/TwelveMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
@@ -314,15 +219,10 @@
 
             <TextView
                 android:id="@+id/FifteenMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -330,15 +230,10 @@
 
             <TextView
                 android:id="@+id/EighteenMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -346,15 +241,10 @@
 
             <TextView
                 android:id="@+id/TwentyFourMonthTxtView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/txtStyle"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toEndOf="@+id/textView12"
@@ -362,33 +252,103 @@
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="380dp"
                 android:layout_marginEnd="70dp"
-                android:autofillHints=""
                 android:hint="@string/amount"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
             <Button
                 android:id="@+id/btnCount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/btnStyle"
                 android:layout_marginStart="95dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="95dp"
                 android:text="@string/btnName"
-                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+            <TextView
+                android:id="@+id/plusThree"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_Three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/plusSix"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_Six"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.77"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/plusNine"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_Nine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/plusTwelve"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_Twelve"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/plusFifteen"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_fifteen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/plusEighteen"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_Eighteen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/plusTwentyFour"
+                style="@style/subTxtStyle"
+                android:layout_marginStart="180dp"
+                android:layout_marginEnd="180dp"
+                app:layout_constraintBottom_toTopOf="@+id/re_payment_TwentyFour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.771"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
