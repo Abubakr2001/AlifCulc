@@ -1,6 +1,7 @@
 package com.leonardo.alifculc
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import java.util.stream.Stream
 
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -26,19 +28,25 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private lateinit var rePayFifteenTxt: TextView
     private lateinit var rePayEighteenTxt: TextView
     private lateinit var rePayTwentyFourTxt: TextView
+    private lateinit var plusThree: TextView
+    private lateinit var plussSix: TextView
+    private lateinit var plussNine: TextView
+    private lateinit var plussTwelve: TextView
+    private lateinit var plussFifteen: TextView
+    private lateinit var plussEighteen: TextView
+    private lateinit var plussTwentyFour: TextView
 
     lateinit var editTxt: EditText
     lateinit var btn: Button
 
     private lateinit var viewModel: MainViewModel
 
-
-
     companion object {
         fun newInstance() = MainFragment()
     }
 
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -58,16 +66,41 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         rePayEighteenTxt = view.findViewById(R.id.re_payment_Eighteen)
         rePayTwentyFourTxt = view.findViewById(R.id.re_payment_TwentyFour)
 
+        plusThree = view.findViewById(R.id.plusThree)
+        plussSix = view.findViewById(R.id.plusSix)
+        plussNine = view.findViewById(R.id.plusNine)
+        plussTwelve = view.findViewById(R.id.plusTwelve)
+        plussFifteen = view.findViewById(R.id.plusFifteen)
+        plussEighteen = view.findViewById(R.id.plusEighteen)
+        plussTwentyFour = view.findViewById(R.id.plusTwentyFour)
 
         editTxt =view.findViewById(R.id.editText)
-
 
         btn = view.findViewById(R.id.btnCount)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.name.observe(viewLifecycleOwner){
-            txtThreeMonth.text = it.toString()
+
+        viewModel.txtThree.observe(viewLifecycleOwner){
+            txtThreeMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtSix.observe(viewLifecycleOwner){
+            txtSixMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtNine.observe(viewLifecycleOwner){
+            txtNineMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtTwelve.observe(viewLifecycleOwner){
+            txtTwelveMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtFifteen.observe(viewLifecycleOwner){
+            txtFifteenMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtEighteen.observe(viewLifecycleOwner){
+            txtEighteenMonth.text = String.format("%.2f", it)
+        }
+        viewModel.txtTwentyFour.observe(viewLifecycleOwner){
+            txtTwentyFourMonth.text = String.format("%.2f", it)
         }
 
 
@@ -84,59 +117,78 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 val rePayResult = String.format("%.2f", rePayThree)
                 rePayThreeTxt.text = rePayResult
                 val sumThree = (((inputD * 6)/100) + inputD)/3
-                val sumThreeResult = String.format("%.2f", sumThree)
-                viewModel.name.value =  sumThree
+                viewModel.txtThree.value =  sumThree
 
                 val rePaySix = (((inputD * 10)/100) + inputD)
                 val rePayResultSix = String.format("%.2f", rePaySix)
                 rePaySixTxt.text = rePayResultSix
                 val sumSix = (((inputD * 10)/100) + inputD)/6
-                val sumSixResult = String.format("%.2f", sumSix)
-                txtSixMonth.text = sumSixResult
-
+                viewModel.txtSix.value = sumSix
 
                 val rePayNine = (((inputD * 15)/100) + inputD)
                 val rePayResultNine = String.format("%.2f", rePayNine)
                 rePayNineTxt.text = rePayResultNine
                 val sumNine = (((inputD * 15)/100) + inputD)/9
-                val sumNineResult = String.format("%.2f", sumNine)
-                txtNineMonth.text = sumNineResult
+                viewModel.txtNine.value = sumNine
 
 
                 val rePayTwelve = (((inputD * 20)/100) + inputD)
                 val rePayResultTwelve = String.format("%.2f", rePayTwelve)
                 rePayTwelveTxt.text = rePayResultTwelve
                 val sumTwelve = (((inputD * 20)/100) + inputD)/12
-                val sumTwelveResult = String.format("%.2f", sumTwelve)
-                txtTwelveMonth.text = sumTwelveResult
+                viewModel.txtTwelve.value = sumTwelve
 
                 val rePayFifteen = (((inputD * 24)/100) + inputD)
                 val rePayResultFifteen = String.format("%.2f", rePayFifteen)
                 rePayFifteenTxt.text = rePayResultFifteen
                 val sumFifteen = (((inputD * 24)/100) + inputD)/15
-                val sumFifteenResult = String.format("%.2f", sumFifteen)
-                txtFifteenMonth.text = sumFifteenResult
+                viewModel.txtFifteen.value = sumFifteen
 
 
                 val rePayEighteen = (((inputD * 27)/100) + inputD)
                 val rePayResultEighteen = String.format("%.2f", rePayEighteen)
                 rePayEighteenTxt.text = rePayResultEighteen
                 val sumEighteen = (((inputD * 27)/100) + inputD)/18
-                val sumEighteenResult = String.format("%.2f", sumEighteen)
-                txtEighteenMonth.text = sumEighteenResult
-
+                viewModel.txtEighteen.value = sumEighteen
 
                 val rePayTwentyFour = (((inputD * 30)/100) + inputD)
                 val rePayResultTwentyFour = String.format("%.2f", rePayTwentyFour)
                 rePayTwentyFourTxt.text = rePayResultTwentyFour
                 val sumTwentyFour = (((inputD * 30)/100) + inputD)/24
-                val sumTwentyFourResult = String.format("%.2f", sumTwentyFour)
-                txtTwentyFourMonth.text = sumTwentyFourResult
+                viewModel.txtTwentyFour.value = sumTwentyFour
+
+
+                val plusTree = ((inputD * 6)/100)
+                val rePlusTree = String.format("%.2f", plusTree)
+                plusThree.text = "+$rePlusTree"
+
+                val plusSix = ((inputD * 10)/100)
+                val rePlusSix = String.format("%.2f", plusSix)
+                plussSix.text= "+$rePlusSix"
+
+                val plusNine = ((inputD * 15)/100)
+                val rePlusNine = String.format("%.2f", plusNine)
+                plussNine.text = "+$rePlusNine"
+
+                val plusTwelve = ((inputD * 20)/100)
+                val rePlusTwelve = String.format("%.2f", plusTwelve)
+                plussTwelve.text = "+$rePlusTwelve"
+
+
+                val plusFifteen = ((inputD * 24)/100)
+                val rePlusFifteen = String.format("%.2f", plusFifteen)
+                plussFifteen.text = "+$rePlusFifteen"
+
+                val plusEighteen= ((inputD * 27)/100)
+                val rePlusEighteen= String.format("%.2f", plusEighteen)
+                plussEighteen.text = "+$rePlusEighteen"
+
+                val plusTwentyFour = ((inputD * 30)/100)
+                val rePlusTwentyFour = String.format("%.2f", plusTwentyFour)
+                plussTwentyFour.text = "+$rePlusTwentyFour"
+
 
             }
-
         }
-
     }
-
 }
